@@ -84,7 +84,7 @@ Got it—here’s a clean, battle-tested path to put Azure Front Door (Standard/
 ```mermaid
 flowchart LR
   user[User] -->|HTTPS| AFD[Azure Front Door Std/Premium]
-  AFD -->|Private Link (Microsoft backbone)| Origin[App Service (Private Endpoint)]
+  AFD -->|Private Link Microsoft backbone| Origin[App Service Private Endpoint]
   subgraph App Service VNet
     Origin
   end
