@@ -1,9 +1,4 @@
 # Azure-Front-To-Private-End-pointed-App-WebService
-
-
-
-Got it—here’s a clean, battle-tested path to put Azure Front Door (Standard/Premium) in front of an App Service that’s locked down with a Private Endpoint.
-
 # Steps
 
 1. Create / lock down the App Service
@@ -137,5 +132,3 @@ az network private-dns link vnet create -g rg-net -n link-app \
 * **WAF**: Attach a WAF policy to the AFD endpoint for L7 protection (OWASP, bot mitigation, geo, rate limit).
 * **No VNet in AFD**: Front Door’s Private Link is **not** routed through your VNet; it’s a managed, private Microsoft backbone connection to your origin.
 * **End-to-end TLS**: Keep HTTPS-only at AFD and App Service; consider HSTS on your custom domain.
-
-If you want, I can tailor this into a one-pager runbook for your team (with your resource names and a checklist).
